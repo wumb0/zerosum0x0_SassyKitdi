@@ -2,11 +2,17 @@
 
 See writeup at https://zerosum0x0.blogspot.com/2020/08/sassykitdi-kernel-mode-tcp-sockets.html
 
+## Study
+
+Most of the code of interest is in the src/common/ntmem (LSASS dump) and src/common/nttdi (TCP sockets) libraries. The shellcode project is in src/payloads/sassykitdi.
+
 ## Build/Run
 
 Install gcc-mingw-w64 and Rustup with x86_64-windows-pc-gnu target.
 
 In src/payloads/sassykitdi there is build.sh and pyit.sh to build the project and scrape the shellcode out of the DLL.
+
+There is also src/socketdump.py which will wait to receive SassyKitdi connections and create a minidump file.
 
 ## Exploit Preambles
 
