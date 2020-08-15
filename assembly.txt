@@ -1,0 +1,918 @@
+0000000061b01420 <_DllMainCRTStartup>:
+    61b01420:	41 57                	push   r15
+    61b01422:	41 56                	push   r14
+    61b01424:	41 55                	push   r13
+    61b01426:	41 54                	push   r12
+    61b01428:	56                   	push   rsi
+    61b01429:	57                   	push   rdi
+    61b0142a:	55                   	push   rbp
+    61b0142b:	53                   	push   rbx
+    61b0142c:	48 81 ec c8 05 00 00 	sub    rsp,0x5c8
+    61b01433:	65 48 8b 1c 25 38 00 	mov    rbx,QWORD PTR gs:0x38
+    61b0143a:	00 00 
+    61b0143c:	48 8b 5b 04          	mov    rbx,QWORD PTR [rbx+0x4]
+    61b01440:	48 81 e3 00 f0 ff ff 	and    rbx,0xfffffffffffff000
+    61b01447:	66 81 3b 4d 5a       	cmp    WORD PTR [rbx],0x5a4d
+    61b0144c:	48 8d 9b 00 f0 ff ff 	lea    rbx,[rbx-0x1000]
+    61b01453:	75 f2                	jne    61b01447 <_DllMainCRTStartup+0x27>
+    61b01455:	48 81 c3 00 10 00 00 	add    rbx,0x1000
+    61b0145c:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01463:	00 
+    61b01464:	48 89 f1             	mov    rcx,rsi
+    61b01467:	48 89 da             	mov    rdx,rbx
+    61b0146a:	41 b8 75 2e df 49    	mov    r8d,0x49df2e75
+    61b01470:	e8 28 0c 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b01475:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b01478:	0f 84 57 03 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b0147e:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01485:	00 
+    61b01486:	48 8b 6e 08          	mov    rbp,QWORD PTR [rsi+0x8]
+    61b0148a:	ba 80 00 00 00       	mov    edx,0x80
+    61b0148f:	31 c9                	xor    ecx,ecx
+    61b01491:	ff d5                	call   rbp
+    61b01493:	48 89 c7             	mov    rdi,rax
+    61b01496:	ba 48 00 00 00       	mov    edx,0x48
+    61b0149b:	31 c9                	xor    ecx,ecx
+    61b0149d:	ff d5                	call   rbp
+    61b0149f:	49 89 c4             	mov    r12,rax
+    61b014a2:	48 89 2f             	mov    QWORD PTR [rdi],rbp
+    61b014a5:	48 89 f1             	mov    rcx,rsi
+    61b014a8:	48 89 da             	mov    rdx,rbx
+    61b014ab:	41 b8 7c 24 98 a1    	mov    r8d,0xa198247c
+    61b014b1:	e8 e7 0b 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b014b6:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b014b9:	0f 84 16 03 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b014bf:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b014c6:	00 
+    61b014c7:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b014cb:	48 89 47 08          	mov    QWORD PTR [rdi+0x8],rax
+    61b014cf:	48 89 f1             	mov    rcx,rsi
+    61b014d2:	48 89 da             	mov    rdx,rbx
+    61b014d5:	41 b8 79 74 fe 3f    	mov    r8d,0x3ffe7479
+    61b014db:	e8 bd 0b 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b014e0:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b014e3:	0f 84 ec 02 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b014e9:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b014f0:	00 
+    61b014f1:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b014f5:	48 89 47 20          	mov    QWORD PTR [rdi+0x20],rax
+    61b014f9:	48 89 f1             	mov    rcx,rsi
+    61b014fc:	48 89 da             	mov    rdx,rbx
+    61b014ff:	41 b8 77 f8 26 8a    	mov    r8d,0x8a26f877
+    61b01505:	e8 93 0b 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b0150a:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b0150d:	0f 84 c2 02 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b01513:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b0151a:	00 
+    61b0151b:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b0151f:	48 89 47 28          	mov    QWORD PTR [rdi+0x28],rax
+    61b01523:	48 89 f1             	mov    rcx,rsi
+    61b01526:	48 89 da             	mov    rdx,rbx
+    61b01529:	41 b8 47 18 b2 77    	mov    r8d,0x77b21847
+    61b0152f:	e8 69 0b 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b01534:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b01537:	0f 84 98 02 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b0153d:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01544:	00 
+    61b01545:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b01549:	48 89 47 30          	mov    QWORD PTR [rdi+0x30],rax
+    61b0154d:	48 89 f1             	mov    rcx,rsi
+    61b01550:	48 89 da             	mov    rdx,rbx
+    61b01553:	41 b8 db 36 a0 46    	mov    r8d,0x46a036db
+    61b01559:	e8 3f 0b 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b0155e:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b01561:	0f 84 6e 02 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b01567:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b0156e:	00 
+    61b0156f:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b01573:	48 89 47 38          	mov    QWORD PTR [rdi+0x38],rax
+    61b01577:	48 89 f1             	mov    rcx,rsi
+    61b0157a:	48 89 da             	mov    rdx,rbx
+    61b0157d:	41 b8 21 4d a6 3c    	mov    r8d,0x3ca64d21
+    61b01583:	e8 15 0b 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b01588:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b0158b:	0f 84 44 02 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b01591:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01598:	00 
+    61b01599:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b0159d:	48 89 47 40          	mov    QWORD PTR [rdi+0x40],rax
+    61b015a1:	48 89 f1             	mov    rcx,rsi
+    61b015a4:	48 89 da             	mov    rdx,rbx
+    61b015a7:	41 b8 9c 98 82 96    	mov    r8d,0x9682989c
+    61b015ad:	e8 eb 0a 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b015b2:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b015b5:	0f 84 1a 02 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b015bb:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b015c2:	00 
+    61b015c3:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b015c7:	48 89 47 48          	mov    QWORD PTR [rdi+0x48],rax
+    61b015cb:	48 89 f1             	mov    rcx,rsi
+    61b015ce:	48 89 da             	mov    rdx,rbx
+    61b015d1:	41 b8 41 ee 35 2d    	mov    r8d,0x2d35ee41
+    61b015d7:	e8 c1 0a 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b015dc:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b015df:	0f 84 f0 01 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b015e5:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b015ec:	00 
+    61b015ed:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b015f1:	48 89 47 18          	mov    QWORD PTR [rdi+0x18],rax
+    61b015f5:	48 89 f1             	mov    rcx,rsi
+    61b015f8:	48 89 da             	mov    rdx,rbx
+    61b015fb:	41 b8 0c 3a d4 73    	mov    r8d,0x73d43a0c
+    61b01601:	e8 97 0a 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b01606:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b01609:	0f 84 c6 01 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b0160f:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01616:	00 
+    61b01617:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b0161b:	48 89 47 10          	mov    QWORD PTR [rdi+0x10],rax
+    61b0161f:	48 89 f1             	mov    rcx,rsi
+    61b01622:	48 89 da             	mov    rdx,rbx
+    61b01625:	41 b8 21 f0 cd cb    	mov    r8d,0xcbcdf021
+    61b0162b:	e8 6d 0a 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b01630:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b01633:	0f 84 9c 01 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b01639:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01640:	00 
+    61b01641:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b01645:	48 89 47 50          	mov    QWORD PTR [rdi+0x50],rax
+    61b01649:	48 89 f1             	mov    rcx,rsi
+    61b0164c:	48 89 da             	mov    rdx,rbx
+    61b0164f:	41 b8 3f 33 f8 da    	mov    r8d,0xdaf8333f
+    61b01655:	e8 43 0a 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b0165a:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b0165d:	0f 84 72 01 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b01663:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b0166a:	00 
+    61b0166b:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b0166f:	49 89 04 24          	mov    QWORD PTR [r12],rax
+    61b01673:	48 89 f1             	mov    rcx,rsi
+    61b01676:	48 89 da             	mov    rdx,rbx
+    61b01679:	41 b8 6a 12 10 cb    	mov    r8d,0xcb10126a
+    61b0167f:	e8 19 0a 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b01684:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b01687:	0f 84 48 01 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b0168d:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01694:	00 
+    61b01695:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b01699:	49 89 44 24 08       	mov    QWORD PTR [r12+0x8],rax
+    61b0169e:	48 89 f1             	mov    rcx,rsi
+    61b016a1:	48 89 da             	mov    rdx,rbx
+    61b016a4:	41 b8 0e 2a b1 7b    	mov    r8d,0x7bb12a0e
+    61b016aa:	e8 ee 09 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b016af:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b016b2:	0f 84 1d 01 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b016b8:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b016bf:	00 
+    61b016c0:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b016c4:	49 89 44 24 10       	mov    QWORD PTR [r12+0x10],rax
+    61b016c9:	48 89 f1             	mov    rcx,rsi
+    61b016cc:	48 89 da             	mov    rdx,rbx
+    61b016cf:	41 b8 ab 99 fc 5b    	mov    r8d,0x5bfc99ab
+    61b016d5:	e8 c3 09 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b016da:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b016dd:	0f 84 f2 00 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b016e3:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b016ea:	00 
+    61b016eb:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b016ef:	49 89 44 24 18       	mov    QWORD PTR [r12+0x18],rax
+    61b016f4:	48 89 f1             	mov    rcx,rsi
+    61b016f7:	48 89 da             	mov    rdx,rbx
+    61b016fa:	41 b8 65 71 e7 85    	mov    r8d,0x85e77165
+    61b01700:	e8 98 09 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b01705:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b01708:	0f 84 c7 00 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b0170e:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01715:	00 
+    61b01716:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b0171a:	49 89 44 24 20       	mov    QWORD PTR [r12+0x20],rax
+    61b0171f:	48 89 f1             	mov    rcx,rsi
+    61b01722:	48 89 da             	mov    rdx,rbx
+    61b01725:	41 b8 2f 05 10 88    	mov    r8d,0x8810052f
+    61b0172b:	e8 6d 09 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b01730:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b01733:	0f 84 9c 00 00 00    	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b01739:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01740:	00 
+    61b01741:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b01745:	49 89 44 24 28       	mov    QWORD PTR [r12+0x28],rax
+    61b0174a:	48 89 f1             	mov    rcx,rsi
+    61b0174d:	48 89 da             	mov    rdx,rbx
+    61b01750:	41 b8 f2 d5 a4 3e    	mov    r8d,0x3ea4d5f2
+    61b01756:	e8 42 09 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b0175b:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b0175e:	74 75                	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b01760:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01767:	00 
+    61b01768:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b0176c:	49 89 44 24 30       	mov    QWORD PTR [r12+0x30],rax
+    61b01771:	48 89 f1             	mov    rcx,rsi
+    61b01774:	48 89 da             	mov    rdx,rbx
+    61b01777:	41 b8 59 80 f3 fc    	mov    r8d,0xfcf38059
+    61b0177d:	e8 1b 09 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b01782:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b01785:	74 4e                	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b01787:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b0178e:	00 
+    61b0178f:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b01793:	49 89 44 24 38       	mov    QWORD PTR [r12+0x38],rax
+    61b01798:	48 89 f1             	mov    rcx,rsi
+    61b0179b:	48 89 da             	mov    rdx,rbx
+    61b0179e:	41 b8 62 39 db c2    	mov    r8d,0xc2db3962
+    61b017a4:	e8 f4 08 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b017a9:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b017ac:	74 27                	je     61b017d5 <_DllMainCRTStartup+0x3b5>
+    61b017ae:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b017b5:	00 
+    61b017b6:	48 8b 46 08          	mov    rax,QWORD PTR [rsi+0x8]
+    61b017ba:	49 89 44 24 40       	mov    QWORD PTR [r12+0x40],rax
+    61b017bf:	48 89 f1             	mov    rcx,rsi
+    61b017c2:	48 89 da             	mov    rdx,rbx
+    61b017c5:	41 b8 31 0c bc 80    	mov    r8d,0x80bc0c31
+    61b017cb:	e8 cd 08 00 00       	call   61b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>
+    61b017d0:	83 3e 01             	cmp    DWORD PTR [rsi],0x1
+    61b017d3:	75 1e                	jne    61b017f3 <_DllMainCRTStartup+0x3d3>
+    61b017d5:	8b 94 24 cc 01 00 00 	mov    edx,DWORD PTR [rsp+0x1cc]
+    61b017dc:	48 63 c2             	movsxd rax,edx
+    61b017df:	48 81 c4 c8 05 00 00 	add    rsp,0x5c8
+    61b017e6:	5b                   	pop    rbx
+    61b017e7:	5d                   	pop    rbp
+    61b017e8:	5f                   	pop    rdi
+    61b017e9:	5e                   	pop    rsi
+    61b017ea:	41 5c                	pop    r12
+    61b017ec:	41 5d                	pop    r13
+    61b017ee:	41 5e                	pop    r14
+    61b017f0:	41 5f                	pop    r15
+    61b017f2:	c3                   	ret    
+    61b017f3:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b017fa:	00 
+    61b017fb:	48 8b 6e 08          	mov    rbp,QWORD PTR [rsi+0x8]
+    61b017ff:	4c 8d 74 24 38       	lea    r14,[rsp+0x38]
+    61b01804:	49 89 3e             	mov    QWORD PTR [r14],rdi
+    61b01807:	48 8d 05 e1 04 00 00 	lea    rax,[rip+0x4e1]        # 61b01cef <_ZN15reverse_tcp_tdi12recv_handler17h6851ce6da84e2854E>
+    61b0180e:	48 89 47 78          	mov    QWORD PTR [rdi+0x78],rax
+    61b01812:	48 8d 9c 24 08 01 00 	lea    rbx,[rsp+0x108]
+    61b01819:	00 
+    61b0181a:	ba 16 00 00 00       	mov    edx,0x16
+    61b0181f:	48 89 d9             	mov    rcx,rbx
+    61b01822:	e8 df 04 00 00       	call   61b01d06 <_ZN5ntdef6macros13RtlZeroMemory17hac26330cacaaca8bE>
+    61b01827:	49 bf 01 00 00 00 0e 	movabs r15,0x2000e00000001
+    61b0182e:	00 02 00 
+    61b01831:	4c 89 3b             	mov    QWORD PTR [rbx],r15
+    61b01834:	48 b8 54 72 61 6e 73 	movabs rax,0x726f70736e617254
+    61b0183b:	70 6f 72 
+    61b0183e:	4c 8d ac 24 68 01 00 	lea    r13,[rsp+0x168]
+    61b01845:	00 
+    61b01846:	49 89 45 00          	mov    QWORD PTR [r13+0x0],rax
+    61b0184a:	48 b8 74 41 64 64 72 	movabs rax,0x7373657264644174
+    61b01851:	65 73 73 
+    61b01854:	49 89 45 08          	mov    QWORD PTR [r13+0x8],rax
+    61b01858:	66 c7 44 24 20 16 00 	mov    WORD PTR [rsp+0x20],0x16
+    61b0185f:	48 89 f1             	mov    rcx,rsi
+    61b01862:	4c 89 ea             	mov    rdx,r13
+    61b01865:	41 b0 10             	mov    r8b,0x10
+    61b01868:	49 89 d9             	mov    r9,rbx
+    61b0186b:	e8 bd 04 00 00       	call   61b01d2d <_ZN5ntdef6macros15make_single_fea17h1d00ac208787236aE>
+    61b01870:	48 8d 5c 24 48       	lea    rbx,[rsp+0x48]
+    61b01875:	48 89 d9             	mov    rcx,rbx
+    61b01878:	4c 89 f2             	mov    rdx,r14
+    61b0187b:	49 89 f0             	mov    r8,rsi
+    61b0187e:	e8 17 05 00 00       	call   61b01d9a <_ZN5nttdi9TdiSocket8tdi_open17h876cc1c08ad10637E>
+    61b01883:	83 3b 01             	cmp    DWORD PTR [rbx],0x1
+    61b01886:	74 6f                	je     61b018f7 <_DllMainCRTStartup+0x4d7>
+    61b01888:	4c 8d 74 24 48       	lea    r14,[rsp+0x48]
+    61b0188d:	49 8b 46 08          	mov    rax,QWORD PTR [r14+0x8]
+    61b01891:	49 8b 4e 10          	mov    rcx,QWORD PTR [r14+0x10]
+    61b01895:	48 89 47 58          	mov    QWORD PTR [rdi+0x58],rax
+    61b01899:	48 89 4f 60          	mov    QWORD PTR [rdi+0x60],rcx
+    61b0189d:	48 b8 43 6f 6e 6e 65 	movabs rax,0x697463656e6e6f43
+    61b018a4:	63 74 69 
+    61b018a7:	48 8d 94 24 08 01 00 	lea    rdx,[rsp+0x108]
+    61b018ae:	00 
+    61b018af:	48 89 02             	mov    QWORD PTR [rdx],rax
+    61b018b2:	48 b8 6f 6e 43 6f 6e 	movabs rax,0x7865746e6f436e6f
+    61b018b9:	74 65 78 
+    61b018bc:	48 89 42 08          	mov    QWORD PTR [rdx+0x8],rax
+    61b018c0:	c6 42 10 74          	mov    BYTE PTR [rdx+0x10],0x74
+    61b018c4:	66 c7 44 24 20 08 00 	mov    WORD PTR [rsp+0x20],0x8
+    61b018cb:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b018d2:	00 
+    61b018d3:	48 89 f1             	mov    rcx,rsi
+    61b018d6:	41 b0 11             	mov    r8b,0x11
+    61b018d9:	45 31 c9             	xor    r9d,r9d
+    61b018dc:	e8 4c 04 00 00       	call   61b01d2d <_ZN5ntdef6macros15make_single_fea17h1d00ac208787236aE>
+    61b018e1:	48 8d 54 24 38       	lea    rdx,[rsp+0x38]
+    61b018e6:	4c 89 f1             	mov    rcx,r14
+    61b018e9:	49 89 f0             	mov    r8,rsi
+    61b018ec:	e8 a9 04 00 00       	call   61b01d9a <_ZN5nttdi9TdiSocket8tdi_open17h876cc1c08ad10637E>
+    61b018f1:	41 83 3e 01          	cmp    DWORD PTR [r14],0x1
+    61b018f5:	75 09                	jne    61b01900 <_DllMainCRTStartup+0x4e0>
+    61b018f7:	8b 54 24 4c          	mov    edx,DWORD PTR [rsp+0x4c]
+    61b018fb:	e9 dc fe ff ff       	jmp    61b017dc <_DllMainCRTStartup+0x3bc>
+    61b01900:	48 8b 44 24 50       	mov    rax,QWORD PTR [rsp+0x50]
+    61b01905:	48 8b 4c 24 58       	mov    rcx,QWORD PTR [rsp+0x58]
+    61b0190a:	48 89 47 68          	mov    QWORD PTR [rdi+0x68],rax
+    61b0190e:	48 89 4f 70          	mov    QWORD PTR [rdi+0x70],rcx
+    61b01912:	48 8b 47 58          	mov    rax,QWORD PTR [rdi+0x58]
+    61b01916:	4c 8d 4c 24 40       	lea    r9,[rsp+0x40]
+    61b0191b:	49 89 01             	mov    QWORD PTR [r9],rax
+    61b0191e:	48 8b 57 70          	mov    rdx,QWORD PTR [rdi+0x70]
+    61b01922:	48 83 64 24 28 00    	and    QWORD PTR [rsp+0x28],0x0
+    61b01928:	48 c7 44 24 20 08 00 	mov    QWORD PTR [rsp+0x20],0x8
+    61b0192f:	00 00 
+    61b01931:	48 8d 4c 24 38       	lea    rcx,[rsp+0x38]
+    61b01936:	41 b0 01             	mov    r8b,0x1
+    61b01939:	e8 70 05 00 00       	call   61b01eae <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE>
+    61b0193e:	85 c0                	test   eax,eax
+    61b01940:	0f 85 96 fe ff ff    	jne    61b017dc <_DllMainCRTStartup+0x3bc>
+    61b01946:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b0194d:	00 
+    61b0194e:	c7 06 03 00 00 00    	mov    DWORD PTR [rsi],0x3
+    61b01954:	48 8b 47 78          	mov    rax,QWORD PTR [rdi+0x78]
+    61b01958:	48 89 46 08          	mov    QWORD PTR [rsi+0x8],rax
+    61b0195c:	48 89 7e 10          	mov    QWORD PTR [rsi+0x10],rdi
+    61b01960:	48 8b 57 60          	mov    rdx,QWORD PTR [rdi+0x60]
+    61b01964:	48 83 64 24 28 00    	and    QWORD PTR [rsp+0x28],0x0
+    61b0196a:	48 c7 44 24 20 18 00 	mov    QWORD PTR [rsp+0x20],0x18
+    61b01971:	00 00 
+    61b01973:	48 8d 4c 24 38       	lea    rcx,[rsp+0x38]
+    61b01978:	41 b0 0b             	mov    r8b,0xb
+    61b0197b:	49 89 f1             	mov    r9,rsi
+    61b0197e:	e8 2b 05 00 00       	call   61b01eae <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE>
+    61b01983:	85 c0                	test   eax,eax
+    61b01985:	0f 85 51 fe ff ff    	jne    61b017dc <_DllMainCRTStartup+0x3bc>
+    61b0198b:	ba 30 00 00 00       	mov    edx,0x30
+    61b01990:	4c 89 f1             	mov    rcx,r14
+    61b01993:	e8 6e 03 00 00       	call   61b01d06 <_ZN5ntdef6macros13RtlZeroMemory17hac26330cacaaca8bE>
+    61b01998:	ba 30 00 00 00       	mov    edx,0x30
+    61b0199d:	48 89 f1             	mov    rcx,rsi
+    61b019a0:	e8 61 03 00 00       	call   61b01d06 <_ZN5ntdef6macros13RtlZeroMemory17hac26330cacaaca8bE>
+    61b019a5:	ba 16 00 00 00       	mov    edx,0x16
+    61b019aa:	4c 89 e9             	mov    rcx,r13
+    61b019ad:	e8 54 03 00 00       	call   61b01d06 <_ZN5ntdef6macros13RtlZeroMemory17hac26330cacaaca8bE>
+    61b019b2:	48 8d 84 24 a8 00 00 	lea    rax,[rsp+0xa8]
+    61b019b9:	00 
+    61b019ba:	48 c7 00 00 2e b6 94 	mov    QWORD PTR [rax],0xffffffff94b62e00
+    61b019c1:	4c 89 6c 24 70       	mov    QWORD PTR [rsp+0x70],r13
+    61b019c6:	c7 44 24 68 16 00 00 	mov    DWORD PTR [rsp+0x68],0x16
+    61b019cd:	00 
+    61b019ce:	4c 89 bc 24 68 01 00 	mov    QWORD PTR [rsp+0x168],r15
+    61b019d5:	00 
+    61b019d6:	66 c7 84 24 70 01 00 	mov    WORD PTR [rsp+0x170],0xbcfb
+    61b019dd:	00 fb bc 
+    61b019e0:	c7 84 24 72 01 00 00 	mov    DWORD PTR [rsp+0x172],0xdd01a8c0
+    61b019e7:	c0 a8 01 dd 
+    61b019eb:	48 8d 9c 24 08 01 00 	lea    rbx,[rsp+0x108]
+    61b019f2:	00 
+    61b019f3:	4c 89 73 08          	mov    QWORD PTR [rbx+0x8],r14
+    61b019f7:	48 89 73 10          	mov    QWORD PTR [rbx+0x10],rsi
+    61b019fb:	48 89 43 18          	mov    QWORD PTR [rbx+0x18],rax
+    61b019ff:	48 8b 57 70          	mov    rdx,QWORD PTR [rdi+0x70]
+    61b01a03:	48 83 64 24 28 00    	and    QWORD PTR [rsp+0x28],0x0
+    61b01a09:	b8 20 00 00 00       	mov    eax,0x20
+    61b01a0e:	48 89 44 24 20       	mov    QWORD PTR [rsp+0x20],rax
+    61b01a13:	48 8d 4c 24 38       	lea    rcx,[rsp+0x38]
+    61b01a18:	41 b0 03             	mov    r8b,0x3
+    61b01a1b:	49 89 d9             	mov    r9,rbx
+    61b01a1e:	e8 8b 04 00 00       	call   61b01eae <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE>
+    61b01a23:	85 c0                	test   eax,eax
+    61b01a25:	0f 85 b1 fd ff ff    	jne    61b017dc <_DllMainCRTStartup+0x3bc>
+    61b01a2b:	48 8d b4 24 c8 01 00 	lea    rsi,[rsp+0x1c8]
+    61b01a32:	00 
+    61b01a33:	c7 06 14 01 00 00    	mov    DWORD PTR [rsi],0x114
+    61b01a39:	48 89 f1             	mov    rcx,rsi
+    61b01a3c:	ff d5                	call   rbp
+    61b01a3e:	48 8d 4c 24 38       	lea    rcx,[rsp+0x38]
+    61b01a43:	48 89 f2             	mov    rdx,rsi
+    61b01a46:	41 b8 14 01 00 00    	mov    r8d,0x114
+    61b01a4c:	e8 77 05 00 00       	call   61b01fc8 <_ZN50_$LT$nttdi..TdiSocket$u20$as$u20$nttdi..Socket$GT$4send17h36146fad852bdf30E>
+    61b01a51:	be 04 00 00 00       	mov    esi,0x4
+    61b01a56:	48 8d 7c 24 40       	lea    rdi,[rsp+0x40]
+    61b01a5b:	48 83 64 24 40 00    	and    QWORD PTR [rsp+0x40],0x0
+    61b01a61:	89 f1                	mov    ecx,esi
+    61b01a63:	48 89 fa             	mov    rdx,rdi
+    61b01a66:	41 ff 54 24 30       	call   QWORD PTR [r12+0x30]
+    61b01a6b:	85 c0                	test   eax,eax
+    61b01a6d:	78 2f                	js     61b01a9e <_DllMainCRTStartup+0x67e>
+    61b01a6f:	48 8b 4c 24 40       	mov    rcx,QWORD PTR [rsp+0x40]
+    61b01a74:	41 ff 54 24 28       	call   QWORD PTR [r12+0x28]
+    61b01a79:	48 89 c1             	mov    rcx,rax
+    61b01a7c:	e8 ed 05 00 00       	call   61b0206e <_ZN8resolver4hash13fnv1a_32_hash17h7c9270a4df1e6101E>
+    61b01a81:	3d 4f 2b cc da       	cmp    eax,0xdacc2b4f
+    61b01a86:	74 1b                	je     61b01aa3 <_DllMainCRTStartup+0x683>
+    61b01a88:	48 8b 4c 24 40       	mov    rcx,QWORD PTR [rsp+0x40]
+    61b01a8d:	41 ff 54 24 20       	call   QWORD PTR [r12+0x20]
+    61b01a92:	81 fe fe ff 00 00    	cmp    esi,0xfffe
+    61b01a98:	0f 87 2f 02 00 00    	ja     61b01ccd <_DllMainCRTStartup+0x8ad>
+    61b01a9e:	83 c6 04             	add    esi,0x4
+    61b01aa1:	eb b8                	jmp    61b01a5b <_DllMainCRTStartup+0x63b>
+    61b01aa3:	48 8b 4c 24 40       	mov    rcx,QWORD PTR [rsp+0x40]
+    61b01aa8:	48 8d 54 24 68       	lea    rdx,[rsp+0x68]
+    61b01aad:	4c 89 62 e0          	mov    QWORD PTR [rdx-0x20],r12
+    61b01ab1:	48 89 4a e8          	mov    QWORD PTR [rdx-0x18],rcx
+    61b01ab5:	48 83 62 f0 00       	and    QWORD PTR [rdx-0x10],0x0
+    61b01aba:	48 83 62 f8 00       	and    QWORD PTR [rdx-0x8],0x0
+    61b01abf:	48 83 62 30 00       	and    QWORD PTR [rdx+0x30],0x0
+    61b01ac4:	48 83 62 38 00       	and    QWORD PTR [rdx+0x38],0x0
+    61b01ac9:	41 ff 14 24          	call   QWORD PTR [r12]
+    61b01acd:	4c 8d 74 24 48       	lea    r14,[rsp+0x48]
+    61b01ad2:	b9 0c 00 00 00       	mov    ecx,0xc
+    61b01ad7:	48 89 df             	mov    rdi,rbx
+    61b01ada:	4c 89 f6             	mov    rsi,r14
+    61b01add:	f3 48 a5             	rep movs QWORD PTR es:[rdi],QWORD PTR ds:[rsi]
+    61b01ae0:	48 8d 84 24 68 01 00 	lea    rax,[rsp+0x168]
+    61b01ae7:	00 
+    61b01ae8:	b9 0c 00 00 00       	mov    ecx,0xc
+    61b01aed:	48 89 c7             	mov    rdi,rax
+    61b01af0:	48 89 de             	mov    rsi,rbx
+    61b01af3:	f3 48 a5             	rep movs QWORD PTR es:[rdi],QWORD PTR ds:[rsi]
+    61b01af6:	48 8d bc 24 a8 00 00 	lea    rdi,[rsp+0xa8]
+    61b01afd:	00 
+    61b01afe:	b9 0c 00 00 00       	mov    ecx,0xc
+    61b01b03:	48 89 c6             	mov    rsi,rax
+    61b01b06:	f3 48 a5             	rep movs QWORD PTR es:[rdi],QWORD PTR ds:[rsi]
+    61b01b09:	48 8d 74 24 38       	lea    rsi,[rsp+0x38]
+    61b01b0e:	48 8b 84 24 f8 00 00 	mov    rax,QWORD PTR [rsp+0xf8]
+    61b01b15:	00 
+    61b01b16:	48 85 c0             	test   rax,rax
+    61b01b19:	74 0a                	je     61b01b25 <_DllMainCRTStartup+0x705>
+    61b01b1b:	48 8b 8c 24 00 01 00 	mov    rcx,QWORD PTR [rsp+0x100]
+    61b01b22:	00 
+    61b01b23:	eb 53                	jmp    61b01b78 <_DllMainCRTStartup+0x758>
+    61b01b25:	83 a4 24 08 01 00 00 	and    DWORD PTR [rsp+0x108],0x0
+    61b01b2c:	00 
+    61b01b2d:	48 8b 84 24 a8 00 00 	mov    rax,QWORD PTR [rsp+0xa8]
+    61b01b34:	00 
+    61b01b35:	48 89 5c 24 20       	mov    QWORD PTR [rsp+0x20],rbx
+    61b01b3a:	48 c7 c1 ff ff ff ff 	mov    rcx,0xffffffffffffffff
+    61b01b41:	31 d2                	xor    edx,edx
+    61b01b43:	4d 89 f0             	mov    r8,r14
+    61b01b46:	41 b9 30 00 00 00    	mov    r9d,0x30
+    61b01b4c:	ff 50 38             	call   QWORD PTR [rax+0x38]
+    61b01b4f:	85 c0                	test   eax,eax
+    61b01b51:	78 7a                	js     61b01bcd <_DllMainCRTStartup+0x7ad>
+    61b01b53:	48 8b 4c 24 50       	mov    rcx,QWORD PTR [rsp+0x50]
+    61b01b58:	48 8b 41 18          	mov    rax,QWORD PTR [rcx+0x18]
+    61b01b5c:	48 8b 40 10          	mov    rax,QWORD PTR [rax+0x10]
+    61b01b60:	48 89 84 24 f8 00 00 	mov    QWORD PTR [rsp+0xf8],rax
+    61b01b67:	00 
+    61b01b68:	48 8b 49 18          	mov    rcx,QWORD PTR [rcx+0x18]
+    61b01b6c:	48 8b 49 10          	mov    rcx,QWORD PTR [rcx+0x10]
+    61b01b70:	48 89 8c 24 00 01 00 	mov    QWORD PTR [rsp+0x100],rcx
+    61b01b77:	00 
+    61b01b78:	48 8b 09             	mov    rcx,QWORD PTR [rcx]
+    61b01b7b:	48 89 8c 24 00 01 00 	mov    QWORD PTR [rsp+0x100],rcx
+    61b01b82:	00 
+    61b01b83:	48 39 c1             	cmp    rcx,rax
+    61b01b86:	74 45                	je     61b01bcd <_DllMainCRTStartup+0x7ad>
+    61b01b88:	48 8b 79 60          	mov    rdi,QWORD PTR [rcx+0x60]
+    61b01b8c:	48 85 ff             	test   rdi,rdi
+    61b01b8f:	74 3c                	je     61b01bcd <_DllMainCRTStartup+0x7ad>
+    61b01b91:	48 8b 41 30          	mov    rax,QWORD PTR [rcx+0x30]
+    61b01b95:	8b 49 40             	mov    ecx,DWORD PTR [rcx+0x40]
+    61b01b98:	83 64 24 48 00       	and    DWORD PTR [rsp+0x48],0x0
+    61b01b9d:	89 4c 24 4c          	mov    DWORD PTR [rsp+0x4c],ecx
+    61b01ba1:	48 89 44 24 50       	mov    QWORD PTR [rsp+0x50],rax
+    61b01ba6:	48 89 f1             	mov    rcx,rsi
+    61b01ba9:	4c 89 f2             	mov    rdx,r14
+    61b01bac:	41 b8 10 00 00 00    	mov    r8d,0x10
+    61b01bb2:	e8 11 04 00 00       	call   61b01fc8 <_ZN50_$LT$nttdi..TdiSocket$u20$as$u20$nttdi..Socket$GT$4send17h36146fad852bdf30E>
+    61b01bb7:	48 89 f1             	mov    rcx,rsi
+    61b01bba:	48 89 fa             	mov    rdx,rdi
+    61b01bbd:	41 b8 64 00 00 00    	mov    r8d,0x64
+    61b01bc3:	e8 00 04 00 00       	call   61b01fc8 <_ZN50_$LT$nttdi..TdiSocket$u20$as$u20$nttdi..Socket$GT$4send17h36146fad852bdf30E>
+    61b01bc8:	e9 41 ff ff ff       	jmp    61b01b0e <_DllMainCRTStartup+0x6ee>
+    61b01bcd:	48 8b 8c 24 c0 00 00 	mov    rcx,QWORD PTR [rsp+0xc0]
+    61b01bd4:	00 
+    61b01bd5:	48 85 c9             	test   rcx,rcx
+    61b01bd8:	74 14                	je     61b01bee <_DllMainCRTStartup+0x7ce>
+    61b01bda:	48 8b 84 24 a8 00 00 	mov    rax,QWORD PTR [rsp+0xa8]
+    61b01be1:	00 
+    61b01be2:	ff 50 18             	call   QWORD PTR [rax+0x18]
+    61b01be5:	48 83 a4 24 c0 00 00 	and    QWORD PTR [rsp+0xc0],0x0
+    61b01bec:	00 00 
+    61b01bee:	48 8d 74 24 48       	lea    rsi,[rsp+0x48]
+    61b01bf3:	48 83 a4 24 08 01 00 	and    QWORD PTR [rsp+0x108],0x0
+    61b01bfa:	00 00 
+    61b01bfc:	48 8b bc 24 a8 00 00 	mov    rdi,QWORD PTR [rsp+0xa8]
+    61b01c03:	00 
+    61b01c04:	48 8b 94 24 b8 00 00 	mov    rdx,QWORD PTR [rsp+0xb8]
+    61b01c0b:	00 
+    61b01c0c:	48 89 5c 24 28       	mov    QWORD PTR [rsp+0x28],rbx
+    61b01c11:	48 c7 44 24 20 30 00 	mov    QWORD PTR [rsp+0x20],0x30
+    61b01c18:	00 00 
+    61b01c1a:	48 c7 c1 ff ff ff ff 	mov    rcx,0xffffffffffffffff
+    61b01c21:	45 31 c0             	xor    r8d,r8d
+    61b01c24:	49 89 f1             	mov    r9,rsi
+    61b01c27:	ff 57 40             	call   QWORD PTR [rdi+0x40]
+    61b01c2a:	85 c0                	test   eax,eax
+    61b01c2c:	78 7f                	js     61b01cad <_DllMainCRTStartup+0x88d>
+    61b01c2e:	48 83 bc 24 08 01 00 	cmp    QWORD PTR [rsp+0x108],0x0
+    61b01c35:	00 00 
+    61b01c37:	74 74                	je     61b01cad <_DllMainCRTStartup+0x88d>
+    61b01c39:	48 8b 4c 24 48       	mov    rcx,QWORD PTR [rsp+0x48]
+    61b01c3e:	48 8b 54 24 60       	mov    rdx,QWORD PTR [rsp+0x60]
+    61b01c43:	48 8d 04 0a          	lea    rax,[rdx+rcx*1]
+    61b01c47:	48 89 84 24 b8 00 00 	mov    QWORD PTR [rsp+0xb8],rax
+    61b01c4e:	00 
+    61b01c4f:	81 7c 24 68 00 10 00 	cmp    DWORD PTR [rsp+0x68],0x1000
+    61b01c56:	00 
+    61b01c57:	75 9a                	jne    61b01bf3 <_DllMainCRTStartup+0x7d3>
+    61b01c59:	41 b8 02 00 00 00    	mov    r8d,0x2
+    61b01c5f:	ff 57 10             	call   QWORD PTR [rdi+0x10]
+    61b01c62:	48 89 84 24 c0 00 00 	mov    QWORD PTR [rsp+0xc0],rax
+    61b01c69:	00 
+    61b01c6a:	48 85 c0             	test   rax,rax
+    61b01c6d:	74 84                	je     61b01bf3 <_DllMainCRTStartup+0x7d3>
+    61b01c6f:	48 8d 54 24 48       	lea    rdx,[rsp+0x48]
+    61b01c74:	48 8b 32             	mov    rsi,QWORD PTR [rdx]
+    61b01c77:	8b 7a 18             	mov    edi,DWORD PTR [rdx+0x18]
+    61b01c7a:	c7 02 01 00 00 00    	mov    DWORD PTR [rdx],0x1
+    61b01c80:	89 7a 04             	mov    DWORD PTR [rdx+0x4],edi
+    61b01c83:	48 89 72 08          	mov    QWORD PTR [rdx+0x8],rsi
+    61b01c87:	4c 8d 74 24 38       	lea    r14,[rsp+0x38]
+    61b01c8c:	4c 89 f1             	mov    rcx,r14
+    61b01c8f:	41 b8 10 00 00 00    	mov    r8d,0x10
+    61b01c95:	e8 2e 03 00 00       	call   61b01fc8 <_ZN50_$LT$nttdi..TdiSocket$u20$as$u20$nttdi..Socket$GT$4send17h36146fad852bdf30E>
+    61b01c9a:	4c 89 f1             	mov    rcx,r14
+    61b01c9d:	48 89 f2             	mov    rdx,rsi
+    61b01ca0:	41 89 f8             	mov    r8d,edi
+    61b01ca3:	e8 20 03 00 00       	call   61b01fc8 <_ZN50_$LT$nttdi..TdiSocket$u20$as$u20$nttdi..Socket$GT$4send17h36146fad852bdf30E>
+    61b01ca8:	e9 20 ff ff ff       	jmp    61b01bcd <_DllMainCRTStartup+0x7ad>
+    61b01cad:	48 8d b4 24 c8 00 00 	lea    rsi,[rsp+0xc8]
+    61b01cb4:	00 
+    61b01cb5:	48 89 f1             	mov    rcx,rsi
+    61b01cb8:	ff 57 08             	call   QWORD PTR [rdi+0x8]
+    61b01cbb:	48 8b 46 e0          	mov    rax,QWORD PTR [rsi-0x20]
+    61b01cbf:	48 8b 4e e8          	mov    rcx,QWORD PTR [rsi-0x18]
+    61b01cc3:	ff 50 20             	call   QWORD PTR [rax+0x20]
+    61b01cc6:	31 c0                	xor    eax,eax
+    61b01cc8:	e9 12 fb ff ff       	jmp    61b017df <_DllMainCRTStartup+0x3bf>
+    61b01ccd:	48 8d bc 24 68 01 00 	lea    rdi,[rsp+0x168]
+    61b01cd4:	00 
+    61b01cd5:	48 8d b4 24 08 01 00 	lea    rsi,[rsp+0x108]
+    61b01cdc:	00 
+    61b01cdd:	b9 0c 00 00 00       	mov    ecx,0xc
+    61b01ce2:	f3 48 a5             	rep movs QWORD PTR es:[rdi],QWORD PTR ds:[rsi]
+    61b01ce5:	ba 25 02 00 c0       	mov    edx,0xc0000225
+    61b01cea:	e9 ed fa ff ff       	jmp    61b017dc <_DllMainCRTStartup+0x3bc>
+
+0000000061b01cef <_ZN15reverse_tcp_tdi12recv_handler17h6851ce6da84e2854E>:
+    61b01cef:	48 8b 44 24 40       	mov    rax,QWORD PTR [rsp+0x40]
+    61b01cf4:	8b 4c 24 28          	mov    ecx,DWORD PTR [rsp+0x28]
+    61b01cf8:	48 8b 54 24 30       	mov    rdx,QWORD PTR [rsp+0x30]
+    61b01cfd:	89 0a                	mov    DWORD PTR [rdx],ecx
+    61b01cff:	48 83 20 00          	and    QWORD PTR [rax],0x0
+    61b01d03:	31 c0                	xor    eax,eax
+    61b01d05:	c3                   	ret    
+
+0000000061b01d06 <_ZN5ntdef6macros13RtlZeroMemory17hac26330cacaaca8bE>:
+    61b01d06:	31 c0                	xor    eax,eax
+    61b01d08:	48 39 c2             	cmp    rdx,rax
+    61b01d0b:	74 09                	je     61b01d16 <_ZN5ntdef6macros13RtlZeroMemory17hac26330cacaaca8bE+0x10>
+    61b01d0d:	c6 04 01 00          	mov    BYTE PTR [rcx+rax*1],0x0
+    61b01d11:	48 ff c0             	inc    rax
+    61b01d14:	eb f2                	jmp    61b01d08 <_ZN5ntdef6macros13RtlZeroMemory17hac26330cacaaca8bE+0x2>
+    61b01d16:	c3                   	ret    
+
+0000000061b01d17 <_ZN5ntdef6macros13RtlCopyMemory17h6c36f05e4e0ef77eE>:
+    61b01d17:	45 31 c9             	xor    r9d,r9d
+    61b01d1a:	4d 39 c1             	cmp    r9,r8
+    61b01d1d:	7d 0d                	jge    61b01d2c <_ZN5ntdef6macros13RtlCopyMemory17h6c36f05e4e0ef77eE+0x15>
+    61b01d1f:	42 8a 04 0a          	mov    al,BYTE PTR [rdx+r9*1]
+    61b01d23:	42 88 04 09          	mov    BYTE PTR [rcx+r9*1],al
+    61b01d27:	49 ff c1             	inc    r9
+    61b01d2a:	eb ee                	jmp    61b01d1a <_ZN5ntdef6macros13RtlCopyMemory17h6c36f05e4e0ef77eE+0x3>
+    61b01d2c:	c3                   	ret    
+
+0000000061b01d2d <_ZN5ntdef6macros15make_single_fea17h1d00ac208787236aE>:
+    61b01d2d:	41 56                	push   r14
+    61b01d2f:	56                   	push   rsi
+    61b01d30:	57                   	push   rdi
+    61b01d31:	55                   	push   rbp
+    61b01d32:	53                   	push   rbx
+    61b01d33:	48 83 ec 20          	sub    rsp,0x20
+    61b01d37:	4d 89 ce             	mov    r14,r9
+    61b01d3a:	44 89 c3             	mov    ebx,r8d
+    61b01d3d:	48 89 d6             	mov    rsi,rdx
+    61b01d40:	48 89 cf             	mov    rdi,rcx
+    61b01d43:	0f b7 6c 24 70       	movzx  ebp,WORD PTR [rsp+0x70]
+    61b01d48:	ba 00 04 00 00       	mov    edx,0x400
+    61b01d4d:	e8 b4 ff ff ff       	call   61b01d06 <_ZN5ntdef6macros13RtlZeroMemory17hac26330cacaaca8bE>
+    61b01d52:	88 5f 05             	mov    BYTE PTR [rdi+0x5],bl
+    61b01d55:	66 89 6f 06          	mov    WORD PTR [rdi+0x6],bp
+    61b01d59:	0f b6 db             	movzx  ebx,bl
+    61b01d5c:	48 8d 4f 08          	lea    rcx,[rdi+0x8]
+    61b01d60:	48 89 f2             	mov    rdx,rsi
+    61b01d63:	49 89 d8             	mov    r8,rbx
+    61b01d66:	e8 ac ff ff ff       	call   61b01d17 <_ZN5ntdef6macros13RtlCopyMemory17h6c36f05e4e0ef77eE>
+    61b01d6b:	4d 85 f6             	test   r14,r14
+    61b01d6e:	74 1e                	je     61b01d8e <_ZN5ntdef6macros15make_single_fea17h1d00ac208787236aE+0x61>
+    61b01d70:	48 8d 0c 3b          	lea    rcx,[rbx+rdi*1]
+    61b01d74:	48 83 c1 09          	add    rcx,0x9
+    61b01d78:	44 0f b7 c5          	movzx  r8d,bp
+    61b01d7c:	4c 89 f2             	mov    rdx,r14
+    61b01d7f:	48 83 c4 20          	add    rsp,0x20
+    61b01d83:	5b                   	pop    rbx
+    61b01d84:	5d                   	pop    rbp
+    61b01d85:	5f                   	pop    rdi
+    61b01d86:	5e                   	pop    rsi
+    61b01d87:	41 5e                	pop    r14
+    61b01d89:	e9 89 ff ff ff       	jmp    61b01d17 <_ZN5ntdef6macros13RtlCopyMemory17h6c36f05e4e0ef77eE>
+    61b01d8e:	90                   	nop
+    61b01d8f:	48 83 c4 20          	add    rsp,0x20
+    61b01d93:	5b                   	pop    rbx
+    61b01d94:	5d                   	pop    rbp
+    61b01d95:	5f                   	pop    rdi
+    61b01d96:	5e                   	pop    rsi
+    61b01d97:	41 5e                	pop    r14
+    61b01d99:	c3                   	ret    
+
+0000000061b01d9a <_ZN5nttdi9TdiSocket8tdi_open17h876cc1c08ad10637E>:
+    61b01d9a:	56                   	push   rsi
+    61b01d9b:	57                   	push   rdi
+    61b01d9c:	48 81 ec d8 00 00 00 	sub    rsp,0xd8
+    61b01da3:	48 89 ce             	mov    rsi,rcx
+    61b01da6:	48 b8 5c 00 44 00 65 	movabs rax,0x7600650044005c
+    61b01dad:	00 76 00 
+    61b01db0:	48 8d 8c 24 90 00 00 	lea    rcx,[rsp+0x90]
+    61b01db7:	00 
+    61b01db8:	48 89 01             	mov    QWORD PTR [rcx],rax
+    61b01dbb:	48 b8 69 00 63 00 65 	movabs rax,0x5c006500630069
+    61b01dc2:	00 5c 00 
+    61b01dc5:	48 89 41 08          	mov    QWORD PTR [rcx+0x8],rax
+    61b01dc9:	48 b8 54 00 63 00 70 	movabs rax,0x7000630054
+    61b01dd0:	00 00 00 
+    61b01dd3:	48 89 41 10          	mov    QWORD PTR [rcx+0x10],rax
+    61b01dd7:	48 8d 7c 24 70       	lea    rdi,[rsp+0x70]
+    61b01ddc:	c7 07 16 00 18 00    	mov    DWORD PTR [rdi],0x180016
+    61b01de2:	48 89 4f 08          	mov    QWORD PTR [rdi+0x8],rcx
+    61b01de6:	48 8d 84 24 a8 00 00 	lea    rax,[rsp+0xa8]
+    61b01ded:	00 
+    61b01dee:	c7 00 30 00 00 00    	mov    DWORD PTR [rax],0x30
+    61b01df4:	48 83 60 08 00       	and    QWORD PTR [rax+0x8],0x0
+    61b01df9:	c7 40 18 40 02 00 00 	mov    DWORD PTR [rax+0x18],0x240
+    61b01e00:	48 89 78 10          	mov    QWORD PTR [rax+0x10],rdi
+    61b01e04:	48 83 60 20 00       	and    QWORD PTR [rax+0x20],0x0
+    61b01e09:	48 83 60 28 00       	and    QWORD PTR [rax+0x28],0x0
+    61b01e0e:	48 8b 3a             	mov    rdi,QWORD PTR [rdx]
+    61b01e11:	4c 89 44 24 48       	mov    QWORD PTR [rsp+0x48],r8
+    61b01e16:	c7 44 24 50 00 04 00 	mov    DWORD PTR [rsp+0x50],0x400
+    61b01e1d:	00 
+    61b01e1e:	83 64 24 40 00       	and    DWORD PTR [rsp+0x40],0x0
+    61b01e23:	c7 44 24 38 03 00 00 	mov    DWORD PTR [rsp+0x38],0x3
+    61b01e2a:	00 
+    61b01e2b:	c7 44 24 30 01 00 00 	mov    DWORD PTR [rsp+0x30],0x1
+    61b01e32:	00 
+    61b01e33:	48 83 64 24 20 00    	and    QWORD PTR [rsp+0x20],0x0
+    61b01e39:	c7 44 24 28 80 00 00 	mov    DWORD PTR [rsp+0x28],0x80
+    61b01e40:	00 
+    61b01e41:	48 8d 4c 24 60       	lea    rcx,[rsp+0x60]
+    61b01e46:	4c 8d 8c 24 80 00 00 	lea    r9,[rsp+0x80]
+    61b01e4d:	00 
+    61b01e4e:	ba 00 00 10 c0       	mov    edx,0xc0100000
+    61b01e53:	49 89 c0             	mov    r8,rax
+    61b01e56:	ff 57 10             	call   QWORD PTR [rdi+0x10]
+    61b01e59:	85 c0                	test   eax,eax
+    61b01e5b:	78 3e                	js     61b01e9b <_ZN5nttdi9TdiSocket8tdi_open17h876cc1c08ad10637E+0x101>
+    61b01e5d:	48 8b 4c 24 60       	mov    rcx,QWORD PTR [rsp+0x60]
+    61b01e62:	48 8d 44 24 68       	lea    rax,[rsp+0x68]
+    61b01e67:	48 83 64 24 28 00    	and    QWORD PTR [rsp+0x28],0x0
+    61b01e6d:	48 89 44 24 20       	mov    QWORD PTR [rsp+0x20],rax
+    61b01e72:	ba 00 00 00 c0       	mov    edx,0xc0000000
+    61b01e77:	45 31 c0             	xor    r8d,r8d
+    61b01e7a:	45 31 c9             	xor    r9d,r9d
+    61b01e7d:	ff 57 18             	call   QWORD PTR [rdi+0x18]
+    61b01e80:	85 c0                	test   eax,eax
+    61b01e82:	78 17                	js     61b01e9b <_ZN5nttdi9TdiSocket8tdi_open17h876cc1c08ad10637E+0x101>
+    61b01e84:	48 8b 44 24 60       	mov    rax,QWORD PTR [rsp+0x60]
+    61b01e89:	48 8b 4c 24 68       	mov    rcx,QWORD PTR [rsp+0x68]
+    61b01e8e:	48 89 46 08          	mov    QWORD PTR [rsi+0x8],rax
+    61b01e92:	48 89 4e 10          	mov    QWORD PTR [rsi+0x10],rcx
+    61b01e96:	83 26 00             	and    DWORD PTR [rsi],0x0
+    61b01e99:	eb 09                	jmp    61b01ea4 <_ZN5nttdi9TdiSocket8tdi_open17h876cc1c08ad10637E+0x10a>
+    61b01e9b:	89 46 04             	mov    DWORD PTR [rsi+0x4],eax
+    61b01e9e:	c7 06 01 00 00 00    	mov    DWORD PTR [rsi],0x1
+    61b01ea4:	48 81 c4 d8 00 00 00 	add    rsp,0xd8
+    61b01eab:	5f                   	pop    rdi
+    61b01eac:	5e                   	pop    rsi
+    61b01ead:	c3                   	ret    
+
+0000000061b01eae <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE>:
+    61b01eae:	41 57                	push   r15
+    61b01eb0:	41 56                	push   r14
+    61b01eb2:	41 54                	push   r12
+    61b01eb4:	56                   	push   rsi
+    61b01eb5:	57                   	push   rdi
+    61b01eb6:	55                   	push   rbp
+    61b01eb7:	53                   	push   rbx
+    61b01eb8:	48 83 ec 70          	sub    rsp,0x70
+    61b01ebc:	4d 89 ce             	mov    r14,r9
+    61b01ebf:	45 89 c7             	mov    r15d,r8d
+    61b01ec2:	48 89 d3             	mov    rbx,rdx
+    61b01ec5:	48 89 ce             	mov    rsi,rcx
+    61b01ec8:	48 8b 01             	mov    rax,QWORD PTR [rcx]
+    61b01ecb:	48 89 d1             	mov    rcx,rdx
+    61b01ece:	ff 50 30             	call   QWORD PTR [rax+0x30]
+    61b01ed1:	48 89 c7             	mov    rdi,rax
+    61b01ed4:	48 8b 06             	mov    rax,QWORD PTR [rsi]
+    61b01ed7:	48 8d 6c 24 58       	lea    rbp,[rsp+0x58]
+    61b01edc:	48 89 e9             	mov    rcx,rbp
+    61b01edf:	31 d2                	xor    edx,edx
+    61b01ee1:	45 31 c0             	xor    r8d,r8d
+    61b01ee4:	ff 50 40             	call   QWORD PTR [rax+0x40]
+    61b01ee7:	48 8b 06             	mov    rax,QWORD PTR [rsi]
+    61b01eea:	48 8d 4c 24 48       	lea    rcx,[rsp+0x48]
+    61b01eef:	48 89 4c 24 40       	mov    QWORD PTR [rsp+0x40],rcx
+    61b01ef4:	83 64 24 28 00       	and    DWORD PTR [rsp+0x28],0x0
+    61b01ef9:	48 89 6c 24 38       	mov    QWORD PTR [rsp+0x38],rbp
+    61b01efe:	48 83 64 24 20 00    	and    QWORD PTR [rsp+0x20],0x0
+    61b01f04:	c6 44 24 30 01       	mov    BYTE PTR [rsp+0x30],0x1
+    61b01f09:	b9 03 00 00 00       	mov    ecx,0x3
+    61b01f0e:	48 89 fa             	mov    rdx,rdi
+    61b01f11:	45 31 c0             	xor    r8d,r8d
+    61b01f14:	45 31 c9             	xor    r9d,r9d
+    61b01f17:	ff 50 28             	call   QWORD PTR [rax+0x28]
+    61b01f1a:	48 85 c0             	test   rax,rax
+    61b01f1d:	0f 84 8c 00 00 00    	je     61b01faf <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE+0x101>
+    61b01f23:	48 89 c5             	mov    rbp,rax
+    61b01f26:	48 8b 80 b8 00 00 00 	mov    rax,QWORD PTR [rax+0xb8]
+    61b01f2d:	c6 40 bb 00          	mov    BYTE PTR [rax-0x45],0x0
+    61b01f31:	48 83 60 f0 00       	and    QWORD PTR [rax-0x10],0x0
+    61b01f36:	48 83 60 f8 00       	and    QWORD PTR [rax-0x8],0x0
+    61b01f3b:	4c 8b a4 24 d8 00 00 	mov    r12,QWORD PTR [rsp+0xd8]
+    61b01f42:	00 
+    61b01f43:	4c 8b 84 24 d0 00 00 	mov    r8,QWORD PTR [rsp+0xd0]
+    61b01f4a:	00 
+    61b01f4b:	48 8b 8d b8 00 00 00 	mov    rcx,QWORD PTR [rbp+0xb8]
+    61b01f52:	c6 41 b8 0f          	mov    BYTE PTR [rcx-0x48],0xf
+    61b01f56:	44 88 79 b9          	mov    BYTE PTR [rcx-0x47],r15b
+    61b01f5a:	48 89 79 e0          	mov    QWORD PTR [rcx-0x20],rdi
+    61b01f5e:	48 89 59 e8          	mov    QWORD PTR [rcx-0x18],rbx
+    61b01f62:	48 83 c1 c0          	add    rcx,0xffffffffffffffc0
+    61b01f66:	4c 89 f2             	mov    rdx,r14
+    61b01f69:	e8 a9 fd ff ff       	call   61b01d17 <_ZN5ntdef6macros13RtlCopyMemory17h6c36f05e4e0ef77eE>
+    61b01f6e:	4d 85 e4             	test   r12,r12
+    61b01f71:	74 04                	je     61b01f77 <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE+0xc9>
+    61b01f73:	4c 89 65 08          	mov    QWORD PTR [rbp+0x8],r12
+    61b01f77:	48 8b 06             	mov    rax,QWORD PTR [rsi]
+    61b01f7a:	48 89 f9             	mov    rcx,rdi
+    61b01f7d:	48 89 ea             	mov    rdx,rbp
+    61b01f80:	ff 50 38             	call   QWORD PTR [rax+0x38]
+    61b01f83:	3d 03 01 00 00       	cmp    eax,0x103
+    61b01f88:	75 19                	jne    61b01fa3 <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE+0xf5>
+    61b01f8a:	48 8b 06             	mov    rax,QWORD PTR [rsi]
+    61b01f8d:	48 83 64 24 20 00    	and    QWORD PTR [rsp+0x20],0x0
+    61b01f93:	48 8d 4c 24 58       	lea    rcx,[rsp+0x58]
+    61b01f98:	31 d2                	xor    edx,edx
+    61b01f9a:	45 31 c0             	xor    r8d,r8d
+    61b01f9d:	45 31 c9             	xor    r9d,r9d
+    61b01fa0:	ff 50 48             	call   QWORD PTR [rax+0x48]
+    61b01fa3:	8b 54 24 48          	mov    edx,DWORD PTR [rsp+0x48]
+    61b01fa7:	85 d2                	test   edx,edx
+    61b01fa9:	78 09                	js     61b01fb4 <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE+0x106>
+    61b01fab:	31 c0                	xor    eax,eax
+    61b01fad:	eb 0a                	jmp    61b01fb9 <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE+0x10b>
+    61b01faf:	ba 9a 00 00 c0       	mov    edx,0xc000009a
+    61b01fb4:	b8 01 00 00 00       	mov    eax,0x1
+    61b01fb9:	48 83 c4 70          	add    rsp,0x70
+    61b01fbd:	5b                   	pop    rbx
+    61b01fbe:	5d                   	pop    rbp
+    61b01fbf:	5f                   	pop    rdi
+    61b01fc0:	5e                   	pop    rsi
+    61b01fc1:	41 5c                	pop    r12
+    61b01fc3:	41 5e                	pop    r14
+    61b01fc5:	41 5f                	pop    r15
+    61b01fc7:	c3                   	ret    
+
+0000000061b01fc8 <_ZN50_$LT$nttdi..TdiSocket$u20$as$u20$nttdi..Socket$GT$4send17h36146fad852bdf30E>:
+    61b01fc8:	41 57                	push   r15
+    61b01fca:	41 56                	push   r14
+    61b01fcc:	56                   	push   rsi
+    61b01fcd:	57                   	push   rdi
+    61b01fce:	53                   	push   rbx
+    61b01fcf:	48 83 ec 40          	sub    rsp,0x40
+    61b01fd3:	44 89 c3             	mov    ebx,r8d
+    61b01fd6:	49 89 d7             	mov    r15,rdx
+    61b01fd9:	48 89 ce             	mov    rsi,rcx
+    61b01fdc:	48 8b 01             	mov    rax,QWORD PTR [rcx]
+    61b01fdf:	44 89 c7             	mov    edi,r8d
+    61b01fe2:	31 c9                	xor    ecx,ecx
+    61b01fe4:	48 89 fa             	mov    rdx,rdi
+    61b01fe7:	ff 10                	call   QWORD PTR [rax]
+    61b01fe9:	49 89 c6             	mov    r14,rax
+    61b01fec:	48 89 c1             	mov    rcx,rax
+    61b01fef:	4c 89 fa             	mov    rdx,r15
+    61b01ff2:	49 89 f8             	mov    r8,rdi
+    61b01ff5:	e8 1d fd ff ff       	call   61b01d17 <_ZN5ntdef6macros13RtlCopyMemory17h6c36f05e4e0ef77eE>
+    61b01ffa:	48 8b 06             	mov    rax,QWORD PTR [rsi]
+    61b01ffd:	48 83 64 24 20 00    	and    QWORD PTR [rsp+0x20],0x0
+    61b02003:	4c 89 f1             	mov    rcx,r14
+    61b02006:	89 da                	mov    edx,ebx
+    61b02008:	45 31 c0             	xor    r8d,r8d
+    61b0200b:	45 31 c9             	xor    r9d,r9d
+    61b0200e:	ff 50 20             	call   QWORD PTR [rax+0x20]
+    61b02011:	48 89 c7             	mov    rdi,rax
+    61b02014:	48 8b 06             	mov    rax,QWORD PTR [rsi]
+    61b02017:	48 89 f9             	mov    rcx,rdi
+    61b0201a:	31 d2                	xor    edx,edx
+    61b0201c:	41 b8 02 00 00 00    	mov    r8d,0x2
+    61b02022:	ff 50 50             	call   QWORD PTR [rax+0x50]
+    61b02025:	4c 8d 4c 24 38       	lea    r9,[rsp+0x38]
+    61b0202a:	41 83 61 04 00       	and    DWORD PTR [r9+0x4],0x0
+    61b0202f:	41 89 19             	mov    DWORD PTR [r9],ebx
+    61b02032:	48 8b 06             	mov    rax,QWORD PTR [rsi]
+    61b02035:	48 8b 50 70          	mov    rdx,QWORD PTR [rax+0x70]
+    61b02039:	48 89 7c 24 28       	mov    QWORD PTR [rsp+0x28],rdi
+    61b0203e:	48 c7 44 24 20 08 00 	mov    QWORD PTR [rsp+0x20],0x8
+    61b02045:	00 00 
+    61b02047:	48 89 f1             	mov    rcx,rsi
+    61b0204a:	41 b0 07             	mov    r8b,0x7
+    61b0204d:	e8 5c fe ff ff       	call   61b01eae <_ZN5nttdi9TdiSocket9tdi_ioctl17h9749a15a95b78aeaE>
+    61b02052:	85 c0                	test   eax,eax
+    61b02054:	75 0b                	jne    61b02061 <_ZN50_$LT$nttdi..TdiSocket$u20$as$u20$nttdi..Socket$GT$4send17h36146fad852bdf30E+0x99>
+    61b02056:	48 8b 06             	mov    rax,QWORD PTR [rsi]
+    61b02059:	4c 89 f1             	mov    rcx,r14
+    61b0205c:	31 d2                	xor    edx,edx
+    61b0205e:	ff 50 08             	call   QWORD PTR [rax+0x8]
+    61b02061:	90                   	nop
+    61b02062:	48 83 c4 40          	add    rsp,0x40
+    61b02066:	5b                   	pop    rbx
+    61b02067:	5f                   	pop    rdi
+    61b02068:	5e                   	pop    rsi
+    61b02069:	41 5e                	pop    r14
+    61b0206b:	41 5f                	pop    r15
+    61b0206d:	c3                   	ret    
+
+0000000061b0206e <_ZN8resolver4hash13fnv1a_32_hash17h7c9270a4df1e6101E>:
+    61b0206e:	b8 c5 9d 1c 81       	mov    eax,0x811c9dc5
+    61b02073:	8a 11                	mov    dl,BYTE PTR [rcx]
+    61b02075:	84 d2                	test   dl,dl
+    61b02077:	74 23                	je     61b0209c <_ZN8resolver4hash13fnv1a_32_hash17h7c9270a4df1e6101E+0x2e>
+    61b02079:	44 8d 42 e0          	lea    r8d,[rdx-0x20]
+    61b0207d:	80 fa 60             	cmp    dl,0x60
+    61b02080:	44 0f b6 ca          	movzx  r9d,dl
+    61b02084:	41 0f b6 d0          	movzx  edx,r8b
+    61b02088:	41 0f 4e d1          	cmovle edx,r9d
+    61b0208c:	0f be d2             	movsx  edx,dl
+    61b0208f:	31 d0                	xor    eax,edx
+    61b02091:	69 c0 93 01 00 01    	imul   eax,eax,0x1000193
+    61b02097:	48 ff c1             	inc    rcx
+    61b0209a:	eb d7                	jmp    61b02073 <_ZN8resolver4hash13fnv1a_32_hash17h7c9270a4df1e6101E+0x5>
+    61b0209c:	c3                   	ret    
+
+0000000061b0209d <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE>:
+    61b0209d:	41 57                	push   r15
+    61b0209f:	41 56                	push   r14
+    61b020a1:	41 55                	push   r13
+    61b020a3:	41 54                	push   r12
+    61b020a5:	56                   	push   rsi
+    61b020a6:	57                   	push   rdi
+    61b020a7:	55                   	push   rbp
+    61b020a8:	53                   	push   rbx
+    61b020a9:	48 83 ec 28          	sub    rsp,0x28
+    61b020ad:	45 89 c5             	mov    r13d,r8d
+    61b020b0:	48 89 d7             	mov    rdi,rdx
+    61b020b3:	48 89 4c 24 20       	mov    QWORD PTR [rsp+0x20],rcx
+    61b020b8:	8b 42 3c             	mov    eax,DWORD PTR [rdx+0x3c]
+    61b020bb:	8b 84 02 88 00 00 00 	mov    eax,DWORD PTR [rdx+rax*1+0x88]
+    61b020c2:	8b 74 02 20          	mov    esi,DWORD PTR [rdx+rax*1+0x20]
+    61b020c6:	44 8b 7c 02 24       	mov    r15d,DWORD PTR [rdx+rax*1+0x24]
+    61b020cb:	8b 5c 02 18          	mov    ebx,DWORD PTR [rdx+rax*1+0x18]
+    61b020cf:	44 8b 64 02 1c       	mov    r12d,DWORD PTR [rdx+rax*1+0x1c]
+    61b020d4:	49 01 d4             	add    r12,rdx
+    61b020d7:	48 01 d6             	add    rsi,rdx
+    61b020da:	45 31 f6             	xor    r14d,r14d
+    61b020dd:	4c 39 f3             	cmp    rbx,r14
+    61b020e0:	74 33                	je     61b02115 <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE+0x78>
+    61b020e2:	4c 89 f5             	mov    rbp,r14
+    61b020e5:	49 ff c6             	inc    r14
+    61b020e8:	8b 0c ae             	mov    ecx,DWORD PTR [rsi+rbp*4]
+    61b020eb:	48 01 f9             	add    rcx,rdi
+    61b020ee:	e8 7b ff ff ff       	call   61b0206e <_ZN8resolver4hash13fnv1a_32_hash17h7c9270a4df1e6101E>
+    61b020f3:	44 39 e8             	cmp    eax,r13d
+    61b020f6:	75 e5                	jne    61b020dd <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE+0x40>
+    61b020f8:	49 01 ff             	add    r15,rdi
+    61b020fb:	41 0f b7 04 6f       	movzx  eax,WORD PTR [r15+rbp*2]
+    61b02100:	41 8b 04 84          	mov    eax,DWORD PTR [r12+rax*4]
+    61b02104:	48 01 f8             	add    rax,rdi
+    61b02107:	48 8b 4c 24 20       	mov    rcx,QWORD PTR [rsp+0x20]
+    61b0210c:	48 89 41 08          	mov    QWORD PTR [rcx+0x8],rax
+    61b02110:	83 21 00             	and    DWORD PTR [rcx],0x0
+    61b02113:	eb 12                	jmp    61b02127 <_ZN8resolver16get_proc_address17hc0e35b28d69f1d2fE+0x8a>
+    61b02115:	48 b8 01 00 00 00 25 	movabs rax,0xc000022500000001
+    61b0211c:	02 00 c0 
+    61b0211f:	48 8b 4c 24 20       	mov    rcx,QWORD PTR [rsp+0x20]
+    61b02124:	48 89 01             	mov    QWORD PTR [rcx],rax
+    61b02127:	48 83 c4 28          	add    rsp,0x28
+    61b0212b:	5b                   	pop    rbx
+    61b0212c:	5d                   	pop    rbp
+    61b0212d:	5f                   	pop    rdi
+    61b0212e:	5e                   	pop    rsi
+    61b0212f:	41 5c                	pop    r12
+    61b02131:	41 5d                	pop    r13
+    61b02133:	41 5e                	pop    r14
+    61b02135:	41 5f                	pop    r15
+    61b02137:	c3                   	ret    
+
+
