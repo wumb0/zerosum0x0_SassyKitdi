@@ -12,3 +12,10 @@ In src/payloads/sassykitdi there is build.sh and pyit.sh to build the project an
 
 SassyKitdi must be performed at PASSIVE_LEVEL. To use the sample project in an exploit payload, you will need to provide your own exploit preamble. This is the unique part of the exploit that cleans up the stack frame, and in e.g. EternalBlue lowers the IRQL from DISPATCH_LEVEL.
 
+## Other Notes
+
+The Rust code compiler generated size is ~3300 bytes, but includes many safety checks and early bailouts. Hand optimization could go down to ~2500 bytes, perhaps further with less safety checks.
+
+## Disclaimer 
+
+Code is provided for educational purposes and is unfriendly due to my laziness. I am not responsible for anyone's actions, including my own, and am warning you not to do illegal things.
