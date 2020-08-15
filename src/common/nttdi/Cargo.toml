@@ -1,0 +1,12 @@
+[package]
+name = "nttdi"
+version = "0.1.0"
+authors = ["zerosum0x0 <zerosum0x0@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+ntdef =   { path = "../ntdef", version = "0.1.0" }
+ntstr =   { path = "../ntstr", version = "0.1.0" }
+stacklstr = { git = "https://github.com/jmage-rs/stacklstr", rev = "9f0762cf81cde37e3d7aeb703be50c53bc0a9f27" }
